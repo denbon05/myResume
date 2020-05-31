@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "0.0.1",
+  "description": "'my resume'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denbon05/myResume.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "den",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denbon05/myResume/issues"
+  },
+  "homepage": "https://github.com/denbon05/myResume#readme"
+}
