@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My resume</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- My container -->
-    <div>
-        <aside>
-            <img src="./img/IMG_20170611_142920.jpg" alt="my_photo" style="width: 300px;">
+    <div class="main-container">
+        <aside class="aside-container">
+            <img src="./img/IMG_20170611_142920.jpg" alt="my_photo" class="main-img">
             <!-- contacts container -->
             <div>
                 <h3>Contacts</h3>
@@ -47,14 +49,17 @@
         </aside>
 
         <!-- About me container -->
-        <div>
+        <div class="about-me">
             <h2>Front-End Developer</h2>
             <h1>Denis Bondarenko</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                <p class="simple-text">Hello! I study and polish my skills to change professions
+                    to a Front-End Developer or a Full-Stack Developer. Those of the best qualities that I can single out are quick learning 
+                    and motivation.
+                    Now I work in Poland. I study all my free time.</p>
             <!-- Project container -->
             <div>
                 <h3>Projects</h3>
-                <ol>
+                <ol class="ol-projects">
                     <li>
                         <a href="https://github.com/denbon05/frontend-project-lvl1">https://github.com/denbon05/frontend-project-lvl1</a>
                         <span>........</span>
@@ -77,27 +82,27 @@
                 <h3>Work Experience</h3>
                 <!-- company 1 -->
                 <div>
-                    <h4>Furniture engineer</h4>
-                    <span>February 2016 - up to now | Poland</span>
-                    <ul>
+                    <h4>Furniture engineer <span class="job-places"> Tapico</span></h4>
+                    <span class="dates">February 2016 - up to now | Poland</span>
+                    <ul class="simple-text">
                         <li>To design furnitures</li>
                         <li>Restoration furnitures</li>
                     </ul>
                 </div>
                 <!-- company 2 -->
                 <div>
-                    <h4>Manager for work with customers</h4>
-                    <span>June 2013 - January 2015 | Ukraine</span>
-                    <ul>
+                    <h4>Manager for work with customers <span class="job-places"> Tinkoff</span></h4>
+                    <span class="dates">June 2013 - January 2015 | Ukraine</span>
+                    <ul class="simple-text">
                         <li>Individual customer lending</li>
                         <li>Calling customers</li>
                     </ul>
                 </div>
                 <!-- company 3 -->
                 <div>
-                    <h4>Operator in call-center</h4>
-                    <span>2013 | Ukraine</span>
-                    <ul>
+                    <h4>Operator in call-center <span class="job-places"> Rostelecom</span></h4>
+                    <span class="dates">2013 | Ukraine</span>
+                    <ul class="simple-text">
                         <li>Make offers to connect a new provider</li>
                         <li>Calling customers</li>
                     </ul>
@@ -106,9 +111,9 @@
             <!-- Education -->
             <div>
                 <h3>Education</h3>
-                <h4>Academy of fire safety</h4>
-                <span>Fire safety</span>
-                <span>August - July 2009 | Ukraine</span>
+                <h4 class="job-places">Academy of fire safety</h4>
+                <div>Fire safety</div>
+                <div class="dates">August 2009 - July 2014 | Ukraine</div>
             </div>
         </div>
 

@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/denbon05/myResume/issues"
   },
-  "homepage": "https://github.com/denbon05/myResume#readme"
+  "homepage": "https://github.com/denbon05/myResume#readme",
+  "dependencies": {
+    "eslint": "^7.1.0"
+  }
 }
