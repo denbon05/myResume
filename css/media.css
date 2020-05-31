@@ -1,0 +1,17 @@
+@media screen and (max-device-width: 700px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .aside-container {
+        padding: 10px;
+    }
+    .about-me {
+        padding: 10px;
+    }
+    .ol-projects {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+}
