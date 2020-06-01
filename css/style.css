@@ -1,7 +1,7 @@
 body {
-    margin: 40px;
+    margin: 20px;
     box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
+    background-color: #f4f6f9;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -9,25 +9,29 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #fff;
 }
 
-.aside-container ul {
-    list-style: none;
+.contacts_skils li {
+    margin-left: -25px;
+    color: #e3630e;
 }
 
-.aside-container ul li::before {
-    content: "\2022";
-    color: #ff6b08;;
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
+.list_text {
+    color: #c7cace;
+    width: 29px;
+    height: 11px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.42px;
 }
 
 .aside-container {
     color: #fff;
     flex-basis: 25%;
-    padding: 30px;
+    padding: 0px;
     background: #1e2939;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -36,14 +40,28 @@ body {
     text-transform: uppercase;
 }
 
+.main-img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contacts_skils {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.contacts_skils h3 {
+    margin-top: 50px;
+}
+
 .aside-container a {
     padding-left: 10px;
     width: 166px;
     height: 39px;
     opacity: 0.5;
-    color: #ffffff;
+    color: #7b818b;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.42px;
@@ -60,22 +78,19 @@ body {
 .about-me {
     flex-basis: 60%;
     padding: 40px;
+    padding-top: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
 }
 
-.main-img {
-    width: 100%;
-}
-
 h1 {
-    width: 171px;
-    height: 25px;
+    width: 175px;
+    height: 5px;
     color: #000000;
     font-family: Montserrat;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     flex-basis: 100%;
 }
