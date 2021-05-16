@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Archive';
+  src: url('../fonts/Archive.ttf');
+}
+
+body {
+  font-family: 'Archive', sans-serif;
+}
+
+.progressbar-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 0px;
+  margin: 0px;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}

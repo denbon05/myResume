@@ -1,125 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My resume</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" media="screen" href="./css/media.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- My container -->
-    <div class="main-container">
-        <aside class="aside-container">
-            <img src="./img/IMG_20170611_142920.jpg" alt="my_photo" class="main-img">
-            <!-- contacts container -->
-            <div class="contacts_skils">
-                <h3>Contacts</h3>
-                <div>
-                    C: <a href="tel:48799817851">+48 799 817 851</a>
-                </div>
-                <div>
-                    E: <a href="mailto:denbbielsko@gmail.com">denbbielsko@gmail.com</a>
-                </div>
-                <!-- Tech skills container -->
-                <div>
-                    <h3>Tech skills</h3>
-                    <ul>
-                        <li><span class="list_text">JavaScript</span></li>
-                        <li><span class="list_text">HTML</span></li>
-                        <li><span class="list_text">CSS</span></li>
-                        <li><span class="list_text">Git</span></li>
-                        <li><span class="list_text">Automation testing</span></li>
-                        <li><span class="list_text">Linux</span></li>
-                        <li><span class="list_text">Terminal(Bash)</span></li>
-                    </ul>
-                </div>
-                <!-- Soft Skills container -->
-                <div>
-                    <h3>Soft Skills</h3>
-                    <ul>
-                        <li><span class="list_text">Teamwork</span></li>
-                        <li><span class="list_text">Adaptability</span></li>
-                        <li><span class="list_text">Attitude</span></li>
-                        <li><span class="list_text">Positivity</span></li>
-                        <li><span class="list_text">Motivation</span></li>
-                    </ul>
-                </div>
-            </div>
-        </aside>
-
-        <!-- About me container -->
-        <div class="about-me">
-            <h2>Front-End Developer</h2>
-            <h1>Denys Bondarenko</h1>
-                <p class="simple-text" style="margin-left: 0px;">Hi! I study and polish my skills to change professions
-                    to a Front-End Developer or a Full-Stack Developer. Those of the best qualities that I can single out are quick learning 
-                    and motivation.
-                    Now I work in Poland. I study all my free time.</p>
-            <!-- Project container -->
-            <div>
-                <h3>Projects</h3>
-                <ol class="ol-projects">
-                    <li>
-                        <a href="https://github.com/denbon05/frontend-project-lvl1">https://github.com/denbon05/frontend-project-lvl1</a>
-                        <span>........</span>
-                        <span><strong>[</strong> JavaScript <strong>]</strong></span>
-                    </li>   
-                    <li>
-                        <a href="https://github.com/denbon05/myResume">https://github.com/denbon05/myResume</a>
-                        <span>..........................</span>
-                        <span><strong>[</strong> HTML5, CSS3 <strong>]</strong></span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/denbon05/hexlet-jest">https://github.com/denbon05/hexlet-jest</a>
-                        <span>...........................</span>
-                        <span><strong>[</strong> JavaScript <strong>]</strong></span>
-                    </li>
-                </ol>
-            </div>
-            <!-- Work experience -->
-            <div>
-                <h3>Work Experience</h3>
-                <!-- company 1 -->
-                <div>
-                    <h4>Furniture engineer <span class="job-places"> Tapico</span></h4>
-                    <span class="dates">February 2016 - up to now | Poland</span>
-                    <ul class="simple-text">
-                        <li>To design furnitures</li>
-                        <li>Restoration furnitures</li>
-                    </ul>
-                </div>
-                <!-- company 2 -->
-                <div>
-                    <h4>Manager for work with customers <span class="job-places"> Tinkoff</span></h4>
-                    <span class="dates">June 2013 - January 2015 | Ukraine</span>
-                    <ul class="simple-text">
-                        <li>Individual customer lending</li>
-                        <li>Calling customers</li>
-                    </ul>
-                </div>
-                <!-- company 3 -->
-                <div>
-                    <h4>Operator in call-center <span class="job-places"> Rostelecom</span></h4>
-                    <span class="dates">2013 | Ukraine</span>
-                    <ul class="simple-text">
-                        <li>Make offers to connect a new provider</li>
-                        <li>Calling customers</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Education -->
-            <div>
-                <h3>Education</h3>
-                <h4 class="job-places">Academy of fire safety</h4>
-                <div>Fire safety</div>
-                <div class="dates">August 2009 - July 2014 | Ukraine</div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+  </head>
+  <body>
+    <div class="container py-3 my-4 border border-second rounded">
+      <div class="row p-4" id="mainInfo">
+        <div class="col">
+          <h1 class="mb-3" id="fullName"></h1>
+          <div class="d-flex flex-column">
+            <ul class="list-group list-group-flush" id="personInfo"></ul>
+          </div>
         </div>
+        <div class="col">
+          <div class="text-right" id="myPhoto"></div>
+        </div>
+      </div>
 
-       
+      <div class="row p-4" id="additionalInfo">
+        <div class="col">
+          <div class="my-4">
+            <div class="profile-container">
+              <h2 class="h4 mb-3">
+                <span class="badge badge-pill badge-info"
+                  ><img
+                    id="smile"
+                    src="./src/img/smile.png"
+                    alt="pie-chart"
+                    width="20"
+                    height="20"
+                  />
+                  <span id="profile"></span>
+                </span>
+              </h2>
+              <p id="profileInfo" class="ml-4"></p>
+            </div>
+          </div>
+          <div class="my-4">
+            <div class="work-container">
+              <h2 class="h4 mb-3">
+                <span class="badge badge-pill badge-info"
+                  ><img
+                    id="briefcase"
+                    src="./src/img/briefcase.png"
+                    alt="pie-chart"
+                    width="20"
+                    height="20"
+                  />
+                  <span id="work"></span>
+                </span>
+              </h2>
+              <div id="workExp" class="ml-4"></div>
+            </div>
+          </div>
+          <div class="my-4">
+            <div class="work-container">
+              <h2 class="h4 mb-3">
+                <span class="badge badge-pill badge-info"
+                  ><img
+                    id="mortarboard"
+                    src="./src/img/mortarboard.png"
+                    alt="pie-chart"
+                    width="20"
+                    height="20"
+                  />
+                  <span id="education"></span>
+                </span>
+              </h2>
+              <div id="educationContainer" class="ml-4"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="my-4">
+            <div class="work-container">
+              <h2 class="h4 mb-3">
+                <span class="badge badge-pill badge-info"
+                  ><img
+                    id="writing"
+                    src="./src/img/writing.png"
+                    alt="pie-chart"
+                    width="20"
+                    height="20"
+                  />
+                  <span id="skills"></span>
+                </span>
+              </h2>
+              <div id="skillsInfo" class="ml-4"></div>
+            </div>
+          </div>
+          <div class="my-4">
+            <div class="languages-container">
+              <h2 class="h4 mb-3">
+                <span class="badge badge-pill badge-info"
+                  ><img
+                    id="tongue"
+                    src="./src/img/tongue.png"
+                    alt="pie-chart"
+                    width="20"
+                    height="20"
+                  />
+                  <span id="languages"></span>
+                </span>
+              </h2>
+              <div id="languagesInfo" class="ml-4 d-flex justify-content-between flex-wrap"></div>
+            </div>
+          </div>
+          <div class="my-4">
+            <div class="achievements-container">
+              <h2 class="h4 mb-3">
+                <span class="badge badge-pill badge-info"
+                  ><img
+                    id="pieChart"
+                    src="./src/img/pie-chart.png"
+                    alt="pie-chart"
+                    width="20"
+                    height="20"
+                  />
+                  <span class="ml-1" id="achievements"></span>
+                </span>
+              </h2>
+              <div id="achievementsInfo" class="ml-4 d-flex justify-content-between flex-wrap">
+                <div class="col-sm-3 col-md-4 col-6 circle-progress-block">
+                  <div id="circleProgress5" class="progressbar-js-circle rounded p-3">
+                    <svg viewBox="0 0 100 100" style="display: block; width: 100%">
+                      <path
+                        d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                        stroke="#e7e8ca"
+                        stroke-width="4"
+                        fill-opacity="0"
+                      ></path>
+                      <path
+                        d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                        stroke="#268aed"
+                        stroke-width="4"
+                        fill-opacity="0"
+                        style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 59.5396"
+                      ></path>
+                    </svg>
+                    <div class="progressbar-text">83</div>
+                  </div>
 
+                  <div class="text-center"><span id="consistency"></span></div>
+                </div>
+                <div class="col-sm-3 col-md-4 col-6 circle-progress-block">
+                  <div id="circleProgress2" class="progressbar-js-circle rounded p-3">
+                    <svg viewBox="0 0 100 100" style="display: block; width: 100%">
+                      <path
+                        d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                        stroke="#e7e8ca"
+                        stroke-width="4"
+                        fill-opacity="0"
+                      ></path>
+                      <path
+                        d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                        stroke="#268aed"
+                        stroke-width="4"
+                        fill-opacity="0"
+                        style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 103.752"
+                      ></path>
+                    </svg>
+                    <div class="progressbar-text" color: rgb(0, 0, 0); font-size: 1rem;">67
+                  </div>
+                </div>
+                <div class="text-center"><span id="attention"></span></div>
+              </div>
+              <div class="col-sm-3 col-md-4 col-6 circle-progress-block">
+                <div id="circleProgress2" class="progressbar-js-circle rounded p-3">
+                  <svg viewBox="0 0 100 100" style="display: block; width: 100%">
+                    <path
+                      d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                      stroke="#e7e8ca"
+                      stroke-width="4"
+                      fill-opacity="0"
+                    ></path>
+                    <path
+                      d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                      stroke="#268aed"
+                      stroke-width="4"
+                      fill-opacity="0"
+                      style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 138.752"
+                    ></path>
+                  </svg>
+                  <div class="progressbar-text" color: rgb(0, 0, 0); font-size: 1rem;">54
+                </div>
+              </div>
+              <div class="text-center"><span id="speed"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
