@@ -89,5 +89,9 @@ export default {
       consistency: 'Proccessing Consitency',
       speed: 'Proccessing Speed',
     },
+
+    projects: {
+      title: 'Projects',
+    },
   },
 };

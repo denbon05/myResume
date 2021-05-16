@@ -1,10 +1,11 @@
-import setProgress from './utils';
+import { setProgress, addProject } from './utils';
 import briefcasePng from './img/briefcase.png';
 import mortarboardPng from './img/mortarboard.png';
 import pieChartPng from './img/pie-chart.png';
 import smilePng from './img/smile.png';
 import tonguePng from './img/tongue.png';
 import writingPng from './img/writing.png';
+import projectPng from './img/project-management.png';
 
 const addPng = () => {
   const ids = [
@@ -14,6 +15,7 @@ const addPng = () => {
     { id: 'writing', src: writingPng },
     { id: 'tongue', src: tonguePng },
     { id: 'pieChart', src: pieChartPng },
+    { id: 'project', src: projectPng },
   ];
   ids.forEach(({ id, src }) => {
     const imgEl = document.getElementById(id);
@@ -130,12 +132,29 @@ const addAchievements = (el, t) => {
   });
 };
 
+const addProjectsInfo = (el, t) => {
+  const projects = [
+    { link: 'https://github.com/denbon05/brain_games', techs: ['Js', 'TDD'] },
+    { link: 'https://github.com/denbon05/backend-project-lvl3', techs: ['NodeJS', 'TDD'] },
+    { link: 'https://github.com/denbon05/genDiff', techs: ['NodeJS', 'Js', 'TDD'] },
+    { link: 'https://github.com/denbon05/frontend-project-lvl3', techs: ['Bootsrap', 'Js', 'TDD'] },
+    { link: 'https://github.com/denbon05/backend-project-lvl4', techs: ['NodeJS', 'PostgreSQL', 'Sqlite3', 'Pug', 'Fastify', 'TDD'] },
+    { link: 'https://github.com/denbon05/blog', techs: ['NodeJS', 'SQL', 'Pug', 'Express', 'TDD'] },
+    { link: 'https://github.com/denbon05/myResume', techs: ['Js', 'HTML', 'CSS', 'Bootstrap'] },
+    { link: 'https://github.com/denbon05/python-project-lvl1', techs: ['Python'] },
+    { link: 'https://github.com/denbon05/hr-app', techs: ['Js', 'React', 'Redux', 'HTML', 'CSS'] },
+  ];
+  el.projectsMainTitle.textContent = t('projects.title');
+  el.projectsContainer.innerHTML = projects.map(({ link, techs }) => addProject(link, techs)).join('');
+};
+
 export default (el, t) => {
   addPng();
   addPersonInfo(el, t);
   addProfileInfo(el, t);
   addWorkExpInfo(el, t);
   addEducationInfo(el, t);
+  addProjectsInfo(el, t);
   addSkillsInfo(el, t);
   addLanguagesInfo(el, t);
   addAchievements(el, t);

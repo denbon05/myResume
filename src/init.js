@@ -25,6 +25,8 @@ export default async () => {
     languagesMainTitle: document.getElementById('languages'),
     languagesContainer: document.getElementById('languagesInfo'),
     achievementsMainTitle: document.getElementById('achievements'),
+    projectsMainTitle: document.getElementById('projects'),
+    projectsContainer: document.getElementById('projectsContainer'),
   };
 
   const t = await initLng();
