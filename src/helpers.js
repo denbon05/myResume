@@ -69,7 +69,7 @@ const addWorkExpInfo = (el, t) => {
 };
 
 const addEducationInfo = (el, t) => {
-  const places = ['academy', 'courses', 'school'];
+  const places = ['courses', 'academy', 'school'];
   el.educationMainTitle.textContent = t('education.title');
   el.educationContainer.innerHTML = places.map((place) => {
     const name = t(`education.palces.${place}.name`);
@@ -88,6 +88,20 @@ const addEducationInfo = (el, t) => {
       '</div>',
     ].join('');
   }).join('');
+
+  const labelEl = document.createElement('label');
+  labelEl.classList = 'text-muted d-block';
+  labelEl.textContent = 'Certificates:';
+  const smalHref = document.createElement('small');
+  smalHref.innerHTML = `<smal><a
+      style="font-size:0.5rem;"
+      href="https://drive.google.com/drive/folders/1uvIqOgDjFcm8f23qw6vyDkw8eFugN_hQ?usp=sharing"
+      class="btn btn-link "
+      target="_blank"
+    >https://drive.google.com/drive/folders/1uvIqOgDjFcm8f23qw6vyDkw8eFugN_hQ?usp=sharing
+  </a ></smal >`;
+  labelEl.appendChild(smalHref);
+  el.educationContainer.appendChild(labelEl);
 };
 
 const addSkillsInfo = (el, t) => {
@@ -95,14 +109,14 @@ const addSkillsInfo = (el, t) => {
     { name: 'JavaScript & Node.js', progress: 75, inProccess: true },
     { name: 'HTML & CSS', progress: 70 },
     { name: 'GIT & GITHUB', progress: 60, inProccess: true },
-    { name: 'Python', progress: 30, inProccess: true },
-    { name: 'C#', progress: 15 },
+    { name: 'Python', progress: 40, inProccess: true },
+    { name: 'Test-driven development', progress: 60, inProccess: true },
     { name: 'Unix', progress: 50, inProccess: true },
     { name: 'Regular Expressions', progress: 70, inProccess: true },
     { name: 'React', progress: 50 },
     { name: 'Redux', progress: 50 },
     { name: 'Pug', progress: 70 },
-    { name: 'Express', progress: 70 },
+    { name: 'Express', progress: 60 },
     { name: 'SQL', progress: 70, inProccess: true },
   ];
   el.skillsMainTitle.textContent = t('skills.title');
@@ -142,6 +156,7 @@ const addProjectsInfo = (el, t) => {
     { link: 'https://github.com/denbon05/blog', techs: ['NodeJS', 'SQL', 'Pug', 'Express', 'TDD'] },
     { link: 'https://github.com/denbon05/myResume', techs: ['Js', 'HTML', 'CSS', 'Bootstrap'] },
     { link: 'https://github.com/denbon05/python-project-lvl1', techs: ['Python'] },
+    { link: 'https://github.com/denbon05/python-project-lvl2', techs: ['Python', 'Pytest'] },
     { link: 'https://github.com/denbon05/hr-app', techs: ['Js', 'React', 'Redux', 'HTML', 'CSS'] },
   ];
   el.projectsMainTitle.textContent = t('projects.title');

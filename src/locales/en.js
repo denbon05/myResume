@@ -67,7 +67,7 @@ export default {
       title: 'Languages',
       en: {
         name: 'English',
-        lvl: 'B2',
+        lvl: 'B1',
       },
       pl: {
         name: 'Polish',
